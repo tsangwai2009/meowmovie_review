@@ -1,0 +1,70 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true
+	},
+	"appid": "wx6a5d06b450ff0ed5",
+	"projectname": "MeowMovie",
+	"libVersion": "2.7.3",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "me",
+					"pathName": "pages/me/me",
+					"query": "selected=1",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "reviewList",
+					"pathName": "pages/review-list/review-list",
+					"query": "id=5d14f6cfea88890a0168bcd7",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "review-detail",
+					"pathName": "pages/review-detail/review-detail",
+					"query": "id=5d21c30fea88890a01bb6f1e",
+					"scene": null
+				}
+			]
+		}
+	}
+}

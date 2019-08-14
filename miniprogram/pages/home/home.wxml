@@ -1,0 +1,22 @@
+<image src='/images/bg.png' class='bg'></image>
+<view class='home'>
+  <view class='suggest'>
+    <navigator url='/pages/movie-detail/movie-detail?id={{movie._id}}'>
+      <image class="image" mode="widthFix" src="{{movie.image}}"></image>
+    </navigator>
+    <view class='name'>{{movie.name}}</view>
+    <navigator class="info" wx:if="{{review}}" url='/pages/review-detail/review-detail?id={{review._id}}'>
+        <image class="head" src="{{review.avater}}"></image>
+        <view class="detail">{{review.username}} 為你推薦了一部電影</view>
+    </navigator>
+      <view class="info" wx:elif="{{!review}}">
+        <view class="detail" bindtap='choose'>快來寫第一份評論吧！</view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='options'>
+      <navigator class='button' url='/pages/movie-list/movie-list'>熱門</navigator>
+      <navigator class='button' url='/pages/me/me?selected=0'>我的</navigator>
+    </view>
+  </view>
+</view>

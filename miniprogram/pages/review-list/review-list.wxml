@@ -1,0 +1,18 @@
+<view class='review-list' wx:if="{{reviewList.length}}">
+  <navigator class="review-block" wx:for="{{reviewList}}" wx:for-item="block" wx:key="id" url='/pages/review-detail/review-detail?id={{block._id}}'>
+
+      <view class="review-info">
+        <image class="review-image" src="{{block.avater}}"></image>
+        <view class="review-name">{{block.username}}</view>
+      </view>
+      <view class="review-content"wx:if="{{block.isVoice==0}}">
+        <view>{{block.content}}</view>
+      </view>
+      <view class='review-sound' wx:if="{{block.isVoice==1}}">
+        <view class="hint-word">＂　</view>
+        <view  class="review-record">(語音)</view>
+      </view>
+  </navigator>
+</view>
+
+<view class='remind-box' wx:elif="{{reviewList.length==0}}"><view class='remind'> 未有評論 </view></view>

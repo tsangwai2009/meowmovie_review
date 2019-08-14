@@ -1,0 +1,71 @@
+<!--<view wx:if="{{!userInfo}}">
+<view class="login-card">
+
+    <view class="login-info">
+      <view class="login-text">未登錄</view>
+      <view class="login-tips">按 "登入" 以 WeChat 帳戶登錄</view>
+    </view>
+</view>
+  <button class="login-btn" open-type='getUserInfo' bindgetuserinfo="onTapLogin">登入</button>
+</view>-->
+
+
+<image class="bg" src="/images/bg.png"></image>
+
+<view wx:if="{{!userInfo}}">
+  <view class="login-card">
+    <view class="login-info">
+      <view class="login-text">未登錄</view>
+      <view class="login-tips">按 "登入" 以 WeChat 帳戶登錄</view>
+    </view>
+  </view>
+  <button class="login-btn" open-type="getUserInfo" bindgetuserinfo="onTapLogin">登入</button>
+</view>
+
+<view class="favour-card" wx:elif="{{selected==0}}">
+  <view class="favour-hint" bindtap='choose'> 己收藏的影評 v</view>
+
+  <navigator class="favour-block" wx:for="{{favourList}}" wx:for-item="block" wx:key="id" url='/pages/review-detail/review-detail?id={{block.reviewId}}'>
+
+      <image wx:if="{{block.image}}" class="favour-image" src="{{block.image}}"></image>
+      <view class="favour-info">
+        <view class="favour-name">{{block.name}}</view>
+        <view class="review-content"wx:if="{{block.isVoice==0}}">
+          <view>{{block.content}}</view>
+        </view>
+        <view class='review-sound' wx:if="{{block.isVoice==1}}">
+          <view class="hint-word">＂</view>
+          <view  class="review-record">(語音)</view>
+        </view>
+        <view class="user-info">
+          <image wx:if="{{block.avater}}" class="user-image" src="{{block.avater}}"></image>
+          <view class="user-name">{{block.username}}</view>
+        </view>
+      </view>
+  </navigator>
+</view>
+
+<view class="review-card" wx:else>
+  <view class="review-hint" bindtap='choose'> 己發佈的影評 v</view>
+
+  <navigator class="review-block" wx:for="{{editList}}" wx:for-item="block" wx:key="id" url='/pages/review-detail/review-detail?id={{block._id}}'>
+
+      <image wx:if="{{block.image}}" class="review-image" src="{{block.image}}"></image>
+      <view class="review-info">
+        <view class="review-name">{{block.name}}</view>
+       <view class="review-content"wx:if="{{block.isVoice==0}}">
+        <view>{{block.content}}</view>
+      </view>
+      <view class='review-sound' wx:if="{{block.isVoice==1}}">
+        <view class="hint-word">＂</view>
+        <view  class="review-record">(語音)</view>
+      </view>
+      </view>
+  </navigator>
+</view>
+
+  <view class='footer'>
+    <view class='options'>
+      <navigator class='button' url='/pages/home/home'>返回首頁</navigator>
+    </view>
+  </view>

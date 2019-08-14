@@ -1,0 +1,32 @@
+
+
+  <!--pages/movie-detail/movie-detail.wxml-->
+<image class="detail-image" src="{{movieDetail.image}}"></image>
+
+<view class='detail-block'>
+  <view class='detail-info'>
+    <view class='detail-name'>{{movieDetail.name}}</view>
+  </view>
+  <view class='review-block'>
+      <view class='review-text' >
+          <view class="review-info">
+            <image class="review-image" src="{{userInfo.avatarUrl}}"></image>
+            <view class="review-name">{{userInfo.nickName}}</view>
+          </view>
+          <view class="review-content"wx:if="{{isVoice==0}}">
+            <view>{{content}}</view>
+          </view>
+          <view class='review-sound' wx:if="{{isVoice==1}}">
+            <view class="hint-word">＂　</view>
+            <view wx:if="{{playing==0}}" class="review-record" bindtap='play'>播放</view>
+            <view wx:if="{{playing==1}}" class="review-record" bindtap='stop'>{{duration}}</view>
+          </view>
+      </view>
+  </view>  
+  <view class='options'>
+    <view class='button' bindtap='back'>重新編輯</view>
+    <view class='button' bindtap='addReview' wx:if="{{isVoice==0}}">發佈影評</view>
+    <view class='button' bindtap='uploadRecord' wx:if="{{isVoice==1}}">發佈影評</view>
+  </view>
+</view>  
+ 

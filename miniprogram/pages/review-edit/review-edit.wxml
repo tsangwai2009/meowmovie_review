@@ -1,0 +1,28 @@
+<!--pages/movie-detail/movie-detail.wxml-->
+<image class="detail-image" src="{{movieDetail.image}}"></image>
+
+<view class='detail-block'>
+  <view class='detail-info'>
+    <view class='detail-name'>{{movieDetail.name}}</view>
+  </view>
+  <view class='review-block'>
+
+    <view class='review-text' wx:if="{{isVoice==0}}">
+      <view class="review-content">
+      <textarea class="review-input" placeholder-class="review-placeholder" placeholder="輸入你的評論..."
+      maxlength="255" bindinput='onInput'></textarea>
+      </view>
+    </view>
+    <view class='review-sound' wx:if="{{isVoice==1}}">
+          <view wx:if="{{recording==0}}" class="review-record" bindtap='start'>按此錄音</view>
+          <view wx:if="{{recording==1}}" class="review-record" bindtap='stop'>停止錄音</view>
+    </view>
+
+  </view>  
+</view>  
+
+  <view class='footer'>
+    <view class='options'>
+      <view class="button {{!content ? 'disable' : ''}}" bindtap="addReview">完成</view>
+    </view>
+  </view>

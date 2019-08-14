@@ -1,0 +1,14 @@
+<!--pages/movie-detail/movie-detail.wxml-->
+<image class="detail-image" src="{{movieDetail.image}}"></image>
+
+<view class='detail-block'>
+  <view class='detail-info'>
+    <view class='detail-name'>{{movieDetail.name}}</view>
+    <view class='detail-descibe'>{{movieDetail.descibe}}</view>  
+  </view>
+  <view class='options'>
+    <navigator class='button' url='/pages/review-list/review-list?id={{movieDetail._id}}'>查看影評</navigator>
+    <view class='button' bindtap='choose'>添加影評</view>
+  </view>
+</view>  
+ 

@@ -1,0 +1,11 @@
+
+  <navigator class="movie-block" wx:for="{{movieList}}" wx:for-item="block" wx:key="id" url='/pages/movie-detail/movie-detail?id={{block._id}}'>
+
+      <image class="movie-image" src="{{block.image}}"></image>
+
+      <view class="movie-info">
+        <view class="movie-name">{{block.name}}</view>
+        <view class="movie-producer">導演： {{block.producer}}</view>
+      </view>
+
+  </navigator>

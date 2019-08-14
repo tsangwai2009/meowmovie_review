@@ -1,0 +1,36 @@
+.movie-block {
+display: flex;
+justify-content: center; 
+align-items: center;
+  margin:26rpx;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+  border-radius: 13rpx;
+}
+
+.movie-image {
+  width:250rpx;
+  height: 328rpx;
+}
+
+.movie-info {
+  flex-grow: 1;
+  padding: 0 50rpx;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  line-height: 30rpx;
+}
+
+.movie-name {
+  color: rgba(29, 29, 38, 0.9);
+  font-size: 36rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+}  
+
+.movie-producer {
+  color: rgba(29, 29, 38, 0.7);
+  margin-top: 36rpx;
+  font-weight: bold;
+}

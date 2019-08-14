@@ -1,0 +1,173 @@
+
+.login-card {
+  display: flex;
+  align-items: center;
+  margin: 50rpx 27rpx 0;
+  height: 200rpx;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+  border-radius: 13rpx;
+}
+
+.footer{
+  width: 100%;
+  position: fixed; 
+  bottom:0;
+}
+
+.options{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.button{
+  background: #f8faff;
+  border: 1px solid #e3e9fa;
+  color: rgba(50, 50, 104, 0.8);
+  flex: 1;
+  list-style: none;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.login-info {
+  flex: 1;
+  margin-left: 100rpx;
+}
+
+.login-text {
+  line-height: 48rpx;
+  font-size: 34rpx;
+  color: rgba(29, 29, 38, 0.8);
+  font-weight: bold;
+}
+
+.login-tips {
+  margin-top: 6rpx;
+  line-height: 33rpx;
+  font-size: 24rpx;
+  color: #8B8B8B;
+}
+
+.login-btn {
+  margin: 34rpx auto 0;
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: rgb(157, 199, 255);
+  outline: none;
+  border: none;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #34373D;
+  font-weight: bold;
+}
+
+.login-btn::after {
+  border: none;
+}
+
+.favour-card,.review-card{margin: 0 0 130rpx;}
+
+.favour-hint,.review-hint{
+  font-weight: bold;
+  margin: 50rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(238, 150, 18);
+}
+
+.favour-block,.review-block {
+display: flex;
+justify-content: center; 
+align-items: center;
+  margin:26rpx;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+  border-radius: 13rpx;
+}
+
+.favour-image,.review-image {
+  width:250rpx;
+  height: 328rpx;
+}
+
+.favour-info,.review-info {
+  flex-grow: 1;
+  padding: 0 50rpx;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  line-height: 30rpx;
+}
+
+.favour-name,.review-name {
+  margin: 10rpx 0;
+  color: rgba(29, 29, 38, 0.9);
+  font-size: 36rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+}  
+
+.favour-content,.review-content {
+  color: rgba(29, 29, 38, 0.7);
+  width: 350rpx;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  display:-webkit-box; 
+  overflow:hidden; 
+  /* 5为显示的行数 */
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+}
+
+.user-image {
+  flex-shrink: 0;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+}
+
+.user-info {
+  margin: 20rpx 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  line-height: 30rpx;
+}
+
+.user-name {
+  padding: 0 20rpx;
+  color: rgba(29, 29, 38, 0.9);
+  font-size: 30rpx;
+  line-height: 42rpx;
+  font-weight: bold;
+} 
+.review-sound{
+    margin:  5rpx;
+    display: flex;
+}
+.review-record{
+  border: 1px solid #94c8ec;
+  background: #f7f9fa;
+  color: #4e697c;
+  padding: 15rpx 80rpx;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+.hint-word{
+  font-size: 40rpx;
+  line-height: 54rpx;
+   font-weight: bold;
+   color: #3c576b;
+}
