@@ -1,4 +1,5 @@
 # meowMovie
+Wechat Mini Program
 By Wai
 
 git clone https://github.com/tsangwai2009/meowmovie_review.git
